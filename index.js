@@ -31,15 +31,15 @@ const cities = [
   }
 ];
 
-let  getCityPopulation = (city) =>  city.population;
+const  getCityPopulation = (city) =>  city.population;
 
 console.log(getCityPopulation(cities[0]))
 
-let isPopulationAboveThreshold = (city,threshold) => city.population >= threshold ? true: false;
+const isPopulationAboveThreshold = (city,threshold) => city.population >= threshold ? true: false;
 console.log(isPopulationAboveThreshold(cities[1], 2000000))
 
 
-let addCity = (cities, city) => {
+const addCity = (cities, city) => {
   cities.push(city)
   return cities;
 }
@@ -50,7 +50,7 @@ const newCity = {
 };
 console.log(addCity(cities, newCity))
 
-let countCitiesInCountry = (cities, country) => {
+const countCitiesInCountry = (cities, country) => {
 	let count = 0;
 	cities.forEach((city)=> city.country == country ? count += 1 : false);
   return count;
